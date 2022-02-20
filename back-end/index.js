@@ -42,10 +42,6 @@ app.all('/*', (req, res, next) => {
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Olá Blumers!');
-})
-
 app.get('/vagas', (req, res) => {
     res.send(blueVagas);
 })

@@ -19,9 +19,7 @@ const getVagas = async () => {
     })
 
 }
-
 getVagas();
-
 
 const escolherVaga = async () => {
     const idDigitado = document.getElementById('idVaga').value;
