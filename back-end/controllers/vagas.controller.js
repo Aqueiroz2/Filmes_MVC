@@ -1,7 +1,7 @@
 const vagasService = require('../services/vagas.service');
 
 const getVagas = (req, res) => {
-    vagasService.getVagasService();
+    const vagas = vagasService.getVagasService();
     res.send(vagas);
 
 }
