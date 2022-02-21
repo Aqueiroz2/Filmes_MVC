@@ -8,7 +8,7 @@ const getVagas = (req, res) => {
 
 const getVagasById = (req, res) => {
     const id = req.params.id
-    vagasService.getVagasByIdService(id);
+    const vaga = vagasService.getVagasByIdService(id);
     res.send(vaga);
 }
 
