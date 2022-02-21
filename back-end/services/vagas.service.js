@@ -33,11 +33,7 @@ const getVagasService = () => {
     return blueVagas;
 }
 
-const getVagasByIdService = (idParam) => {
-    blueVagas.find((vaga) => {
-        return vaga.id == idParam
-    })
-}
+const getVagasByIdService = (idParam) => blueVagas.find((vaga) => vaga.id == idParam)
 
 module.exports = {
     getVagasService,
