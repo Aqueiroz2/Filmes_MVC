@@ -3,6 +3,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json());
+
 const vagasRouter = require('./routes/vagas.route');
 
 app.use('/vagas', vagasRouter);
@@ -14,7 +16,6 @@ app.all('/*', (req, res, next) => {
     next();
 })
 
-app.use(express.json());
 
 const port = 3000;
 app.listen(port, () => {

@@ -13,7 +13,17 @@ const getVagasById = (req, res) => {
 }
 
 
+const postVaga = (req, res) => {
+    const vaga = req.body;
+    vagasService.addVaga(vaga);
+    const newVaga = vagasService.addVaga(vaga);
+    res.send({ message: `Vaga ${ newVaga.oportunidade } na empresa ${ newVaga.empresa } cadastrada com sucesso`})
+
+}
+
+
 module.exports = {
     getVagas,
-    getVagasById
+    getVagasById,
+    postVaga
 }

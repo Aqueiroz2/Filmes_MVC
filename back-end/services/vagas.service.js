@@ -35,8 +35,18 @@ const getVagasService = () => {
 
 const getVagasByIdService = (idParam) => blueVagas.find((vaga) => vaga.id == idParam)
 
+const addVaga = (newVaga) => {
+    const newId = blueVagas.length + 1;
+    newVaga.id = newId;
+
+    blueVagas.push(newVaga);
+    return newVaga;
+}
+
+
 module.exports = {
     getVagasService,
-    getVagasByIdService
+    getVagasByIdService,
+    addVaga
 }
 

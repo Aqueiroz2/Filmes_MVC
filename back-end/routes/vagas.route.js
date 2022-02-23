@@ -8,6 +8,6 @@ router.get('/', vagasController.getVagas);
 
 router.get('/:id' , vagasController.getVagasById);
 
-
+router.post('/add', vagasController.postVaga);
 
 module.exports = router;
